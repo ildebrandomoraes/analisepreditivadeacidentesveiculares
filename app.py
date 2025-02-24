@@ -1,9 +1,9 @@
-import os
-import pandas as pd
 from flask import Flask, render_template, request
 import folium
 from folium.plugins import MarkerCluster
 from datetime import datetime
+import os
+import pandas as pd
 
 app = Flask(__name__)
 
@@ -12,9 +12,12 @@ def load_data():
     data_path = os.path.join(os.path.dirname(__file__), 'accidents_2017_to_2023_portugues.csv')
     df = pd.read_csv(data_path)
     df['date'] = pd.to_datetime(df['date'])
-    
-
     return df
+
+# Rota para a página principal
+@app.route('/home')
+def home():
+    return render_template('home.html')
 
 # Rota principal que renderiza o mapa
 @app.route('/')
