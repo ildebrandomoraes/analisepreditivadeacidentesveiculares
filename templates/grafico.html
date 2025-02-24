@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráfico de Variação Percentual</title>
+    <!-- Inclua o Plotly via CDN -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <h1>Variação Percentual de Tracado Via (2017-2023)</h1>
+    <!-- Div para exibir o gráfico -->
+    <div id="grafico"></div>
+
+    <!-- Botão para voltar à página principal -->
+    <a href="{{ url_for('home') }}">
+        <button>Voltar à Página Principal</button>
+    </a>
+
+    <!-- Script para renderizar o gráfico -->
+    <script>
+        // Dados do gráfico
+        var data = {{ grafico_json | safe }};
+
+        // Renderizar o gráfico
+        Plotly.newPlot('grafico',data);
+    </script>
+</body>
+</html>

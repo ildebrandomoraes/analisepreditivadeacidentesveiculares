@@ -3,13 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RIASP</title>
+    <title>Página Principal</title>
 </head>
 <body>
-    <h1>Bem vindo ao RIASP "Rastreamento Inteligente analise são paulo</h1>
-    <p>MAPA DE LOCALIZAÇÂO.</p>
+    <h1>Bem-vindo à Página Principal</h1>
+    <p>Clique nos botões abaixo para acessar as funcionalidades:</p>
+    
+    <!-- Botão para acessar o mapa -->
     <a href="{{ url_for('index') }}">
         <button>Acessar Mapa</button>
+    </a>
+
+    <!-- Botão para acessar o gráfico -->
+    <a href="{{ url_for('grafico') }}">
+        <button>Acessar Gráfico</button>
     </a>
 </body>
 </html>
