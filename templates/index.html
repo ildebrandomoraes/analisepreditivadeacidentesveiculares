@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa de Acidentes</title>
+</head>
+<body>
+    <h1>Mapa de Acidentes</h1>
+    <form action="/filter" method="post">
+        <label for="start_date">Data Inicial:</label>
+        <input type="date" id="start_date" name="start_date">
+        <label for="end_date">Data Final:</label>
+        <input type="date" id="end_date" name="end_date">
+        <button type="submit">Filtrar</button>
+    </form>
+    {{ map_html|safe }}
+</body>
+</html>
