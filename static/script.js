@@ -1,5 +1,5 @@
 document.getElementById('mapaBtn').addEventListener('click', function() {
-    alert('Você será redirecionado para o Mapa!');
+    alert('Você será redirecionado para o Mapa');
 });
 
 document.getElementById('graficoBtn').addEventListener('click', function() {
