@@ -77,6 +77,15 @@ def filter_data():
 
     return render_template('index.html', map_html=map_html)
 
+@app.route('/choropleth')
+def choropleth():
+    return render_template('choropleth.html') 
+
+@app.route('/mapa_calor')  # Rota para mapa de calor
+def mapa_calor():
+    return render_template('mapa_calor.html')
+        
+    
 # Rota para o gráfico de variação percentual
 @app.route('/grafico')
 def grafico():

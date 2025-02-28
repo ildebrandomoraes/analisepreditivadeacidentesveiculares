@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RIASP</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
     <div class="container">
-        <h1>Bem Vindo ao RIAP </h1>
+        <h1>Bem-vindo ao RIASP</h1>
         <p>Faça suas buscas por acidentes nas rodovias listadas abaixo:</p>
         
         <!-- Botão para acessar o mapa -->
@@ -21,17 +21,17 @@
             <button id="graficoBtn">Acessar Gráficos</button>
         </a>
 
-        <!-- Botão para acessar o gráfico -->
-        <a href="{{ url_for('grafico') }}">
-            <button id="regiõesbtn">Acessar Mapa Choropleth</button>
+        <!-- Botão para acessar o mapa Choropleth -->
+        <a href="{{ url_for('choropleth') }}">
+            <button id="regioesBtn">Acessar Mapa Choropleth</button>
         </a>
 
-        <!-- Botão para acessar o gráfico -->
-        <a href="{{ url_for('grafico') }}">
-            <button id="mapacalorbtnBtn">Acessar Mapa de calor</button>
+        <!-- Botão para acessar o mapa de calor -->
+        <a href="{{ url_for('mapa_calor') }}">
+            <button id="mapaCalorBtn">Acessar Mapa de Calor</button>
         </a>
     </div>
 
-    <script src="script.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
